@@ -33,15 +33,16 @@ function reload(){
 
 
 function makeTask(){
-  const tr = document.createElement('tr');
-  const idText = document.createElement('td');
-  const contentText =  document.createElement('td');
-  const conditionBtn = document.createElement('button');
-  const deleteBtn = document.createElement('button');
+  
   
   if(todos.length > 0){
     
     todos.forEach(function(todo,index){
+      const tr = document.createElement('tr');
+      const idText = document.createElement('td');
+      const contentText =  document.createElement('td');
+      const conditionBtn = document.createElement('button');
+      const deleteBtn = document.createElement('button');
       idText.textContent = todo.id;
       contentText.textContent = todo.content;
       conditionBtn.textContent = todo.status;

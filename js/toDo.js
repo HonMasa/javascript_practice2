@@ -35,7 +35,7 @@ function reload(){
 function makeTask(){
   
   
-  if(todos.length > 0){
+  if(todos.length){
     
     todos.forEach(function(todo,index){
       const tr = document.createElement('tr');
@@ -59,7 +59,7 @@ function makeTask(){
         reload();
       });
 
-      if(allBtn.checked === true){
+      if(allBtn.checked){
         
         tr.appendChild(idText);
         tr.appendChild(contentText);

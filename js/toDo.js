@@ -6,6 +6,7 @@ const doneBtn = document.getElementById("done");
 const inputText = document.getElementById("task");
 const addBtn = document.getElementById("add_button");
 const lists = document.getElementById("todo_lists");
+const btns = document.getElementById("btns");
 
 const todos = [];
 
@@ -85,17 +86,11 @@ addBtn.addEventListener('click', () => {
 
 
 //絞り込みボタンの処理
-allBtn.addEventListener('click', () => {
+btns.addEventListener('click', () => {
   reload();
 });
 
-workBtn.addEventListener('click', () => {
-  reload();
-});
 
-doneBtn.addEventListener('click', () => {
-  reload();
-});
 
 
 

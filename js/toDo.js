@@ -11,7 +11,7 @@ const todos = [];
 
 function addTask(id, content, status){
   
-  if(content.length > 0){
+  if(content.length){
     const todo = {
       id: id,
       content: content,

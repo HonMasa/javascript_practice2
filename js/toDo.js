@@ -59,31 +59,14 @@ function makeTask(){
         reload();
       });
 
-      if(allBtn.checked){
+      if((allBtn.checked) || (workBtn.checked && todo.status === "作業中") || (doneBtn.checked && todo.status === "完了")){
         
         tr.appendChild(idText);
         tr.appendChild(contentText);
         tr.appendChild(conditionBtn);
         tr .appendChild(deleteBtn);
         lists.appendChild(tr);
-      }else if(workBtn.checked){
-        if(todo.status === "作業中"){
-         
-          tr.appendChild(idText);
-          tr.appendChild(contentText);
-          tr.appendChild(conditionBtn);
-          tr .appendChild(deleteBtn);
-          lists.appendChild(tr);
-        }
-      }else{
-        if(todo.status === "完了"){
-          
-          tr.appendChild(idText);
-          tr.appendChild(contentText);
-          tr.appendChild(conditionBtn);
-          tr .appendChild(deleteBtn);
-          lists.appendChild(tr);
-        }
+      
       }
 
       
